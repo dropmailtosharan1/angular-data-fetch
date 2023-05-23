@@ -1,0 +1,9 @@
+<h2>Fetching data form Fake-Api</h2>
+
+<!-- {{myData | json}} -->
+
+<ul>
+    <li *ngFor="let item of myData$ | async">
+        {{item.id}} - {{item.name}}
+    </li>
+</ul>

@@ -1,0 +1,62 @@
+<div>
+    <h2>Forms Data Storage</h2>
+    <div>
+        <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+           <div>
+            <label for="text">First Name:</label>
+            <input type="text" formControlName="firstName">
+           </div> <br>
+           <div>
+            <label for="text">Last Name:</label>
+            <input type="email" formControlName="lastName">
+           </div><br>
+           <div>
+            <button type="submit">
+                Add Data
+            </button>
+           </div>
+        </form>
+    </div>
+</div>
+
+<!-- <div *ngIf="formData.valid">
+    <p>Data</p>
+    <p>FirstName: {{formData.value.firstName}}</p>
+    <p>FirstName: {{formData.value.lastName}}</p>
+</div> -->
+<!-- <p>{{usersDate.firstName | json}}</p> -->
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Madian Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Username</th>
+        <th>Password</th>
+    </tr>
+
+    <tr  *ngFor="let users of usersDate.users">
+        <td>{{users.firstName}}</td>
+        <td>{{users.maidenName}}</td>
+        <td>{{users.lastName}}</td>
+        <td>{{users.age}}</td>
+        <td>{{users.gender}}</td>
+        <td>{{users.email}}</td>
+        <td>{{users.phone}}</td>
+        <td>{{users.username}}</td>
+        <td>{{users.password}}</td>
+    </tr>
+</table>
+
+<!-- <table>
+    <tr>
+        <th>firstName</th>
+        <th>lastName</th>
+    </tr>
+    <tr *ngFor="let user of usersDate">
+    </tr>
+</table> -->
